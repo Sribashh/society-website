@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>IOSC-BVP</title>
+        <link
+            rel="stylesheet"
+            href="resources/swiper js/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/css/loader.css" />
+        <link rel="stylesheet" href="resources/css/hamburger.css" />
+        <link rel="stylesheet" href="resources/css/home.css" />
+        <link rel="stylesheet" href="resources/css/about.css" />
+        <link rel="stylesheet" href="resources/css/services.css">
+        <link rel="stylesheet" href="resources/css/portfolio.css" />
+        <link rel="stylesheet" href="resources/css/blog.css" />
+        <link rel="stylesheet" href="resources/css/contact.css" />
+        <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="resources/css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="resources/img/logo.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- THE REAL NAVIGATION -->
+        <nav class="navigation">
+           
+            <h1 class="corner">
+                IOSC-BVP
+                <div></div>
+                <div></div>
+            </h1>
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about</a
+                    >
+                </li>
+                <li><a href="#" onclick="services(); animate6.play();">benefits</a></li>
+                <li><a href="#" onclick="portfolio()">Gallery</a></li>
+                <li><a href="#" onclick="blog()">team</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact</a>
+                </li>
+            </ul>
+            <p>&copy; IOSC 2024</p>
+        </nav>
+
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <style>
+                            h1 {
+                            text-align: center; 
+                            font-style: italic;
+                            font-family: "Pacifico", cursive;
+                            font-weight: 400;
+                            font-style: normal;
+                              }
+                          </style>
+                        <h1>Empowering Innovation, Shaping Futures</h1>
+                        <div class="social-icons">
+                            <div class="s-icon">
+                                <a href="https://www.linkedin.com/company/iosc-bvcoe/?original_referer=https%3A%2F%2Fis-aglitch.github.io%2F">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <div class="s-name">Linkdin</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="https://www.instagram.com/iosc.bvcoe/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div class="s-name">Instagram</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                        </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="about(); animate3.play(); animate4.play();"
+                            >
+                                <span class="w">W</span>
+                                <span class="tooltip"> Who are you? </span>
+                            </button>
+                            <button onclick="services(); animate6.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> why do i join you? </span>
+                            </button>
+                            <button onclick="portfolio()">
+                                <span class="w">W</span>
+                                <span class="tooltip">
+                                    what have you done?
+                                </span>
+                            </button>
+                            <button onclick="blog()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> who are in your team? </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> where are you? </span>
+                            </button>
+                        </div>
+
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <!-- SEGMENT FOR STYLING. -->
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <!-- REAL CONTENT -->
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <p>Welcome</p>
+                                <h1>Visitor,</h1
+                                <p class="text">
+                                    IOSC-BVP, the inaugural Intel collaborated initiative by the Department of Electronics and Communication Engineering at Bharati Vidyapeeth's College of Engineering, embarked on its journey on November 7, 2022. The primary objective of this club is to augment students' skills in both technical and non-technical domains.
+                                    IOSC-BVP was established with a forward-looking vision for growth in artificial intelligence (AI), machine learning (ML), and data-centric applications across various domains of the Internet of Things (IoT). Recognizing the industry's demand for a programming model that facilitates rapid innovation, IOSC is committed to bridging the gap between industry requirements and students' educational experiences.
+
+                                </p>
+                                <style>
+                                    ul {
+                                      list-style-type: square; /* Change the bullet point style */
+                                      margin-top: 50px; /* Add gap from the main paragraph */
+                                      font-size: 24px; /* Increase font size of bullet points */
+                                    }
+                                  
+                                    li {
+                                      margin-bottom: 10px; /* Add some spacing between each bullet point */
+                                    }
+                                  </style>
+                                <p><b>IntelOneAPI, what you wished existed...</b></p>
+                                <ul>
+                                 <li>Joining a club or a society will enable you to connect to a peer group who shares similar interests as you.</li>
+                                 <li>Being a part of a club or a society helps you to gain knowledge, skills and experience in leadership.</li>
+                                 <li>You will undoubtedly learn new skills. In a diverse group, you will be able to experience personal growth.</li>
+                                </ul>
+                                <p>Joining a club or a society will enable you to connect to a peer group who shares similar interests as you.You will get an insight into other countries culture, values, thinking process and views.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- THE NAVIGATION OF ABOUT -->
+                  
+
+                    <div class="about_container">
+                        <!-- SKILL BOX -->
+                        <div class="skills">
+                            <div class="kill">
+                                <div class="nme"></div>
+                                <div class="vale" style="left: 0%"></div>
+                                <div class="perent">
+                                    <div
+                                        class="progress"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skil">
+                                <div class="nae"></div>
+                                <div class="vale" style="left: 0%"></div>
+                                <div class="percet">
+                                    <div
+                                        class="progress"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="sill">
+                                <div class="nme"></div>
+                                <div class="vlue" style="left: 0%"></div>
+                                <div class="percnt">
+                                    <div
+                                        class="pogress"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skil">
+                                <div class="na"></div>
+                                <div class="vaue" style="left: 0%"></div>
+                                <div class="prcent">
+                                    <div
+                                        class="progress"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skil">
+                                <div class="name"></div>
+                                <div class="vale" style="left: 0%"></div>
+                                <div class="pecent">
+                                    <div
+                                        class="pogress"
+                                      
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="sill">
+                                <div class="nae"></div>
+                                <div class="vlue" style="left: 0%"></div>
+                                <div class="pecent">
+                                    <div
+                                        class="prress"
+                                        style="width: 0%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experence">
+                            <div class="mddle_line"></div>
+                            <div class="coer">
+                                <i class="jo_box fas fa-briefcase"></i>
+                                <i class="dte"></i>
+                                <h2></h2>
+                                <i class="nae_company"></i>
+                                <article class="tet_hidden">   
+                                </article>
+                            </div>
+                            <div class="whiespace"></div>
+                            <div class="whitspace"></div>
+                            <div class="coer">
+                                <i class="jo_box fas fa-briefcase"></i>
+                                <i class="dte"></i>
+                                <h2></h2>
+                                <i class="nme_company"></i>
+                                <article class="txt_hidden">
+                                    
+                                </article>
+                            </div>
+                            <div class="coer">
+                                <i class="jobbox fas fa-briefcase"></i>
+                                <i class="dte"></i>
+                                <h2></h2>
+                                <i class="name_ompany"></i>
+                                <article class="tet_hidden">
+                                   
+                                </article>
+                            </div>
+                            <div class="whitepace"></div>
+                            <div class="whitesace"></div>
+                            <div class="coer">
+                                <i class="jo_box fas fa-briefcase"></i>
+                                <i class="dte"></i>
+                                <h2></h2>
+                                <i class="namecompany"></i>
+                                <article class="tet_hidden">
+                                  
+                                </article>
+                            </div>
+                        </div>
+                        <div class="eduction">
+                            <div class="midle_line"></div>
+                            <div class="coer">
+                                <i class="job_ox fas fa-book-reader"></i>
+                                <i class="dae"></i>
+                                <h2></h2>
+                                <i class="nae_company"></i>
+                                <article class="tet_hidden">
+                                    
+                                </article>
+                            </div>
+                            <div class="whtespace"></div>
+                            <div class="whtespace"></div>
+                            <div class="covr">
+                                <i class="jb_box fas fa-book-reader"></i>
+                                <i class="dte"></i>
+                                <h2></h2>
+                                <i class="name_cmpany"></i>
+                                <article class="texthidden">
+                                    
+                                </article>
+                            </div>
+                            <div class="covr">
+                                <i class="jb_box fas fa-book-open"></i>
+                                <i class="dte"></i>
+                                <h2></h2>
+                                <i class="name_cmpany"></i>
+                                <article class="texthidden">
+                                    
+                                </article>
+                            </div>
+                            <div class="whtespace"></div>
+                            <div class="whiespace"></div>
+                            <div class="cver">
+                                <i class="jb_box fas fa-book-open"></i>
+                                <i class="dae"></i>
+                                <h2></h2>
+                                <i class="namecompany"></i>
+                                <article class="texthidden">
+                                   
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                    <div class="hero">
+                        <span class="typography">
+                            <span class="t_dummy">We make students</span> <br />
+                            <span class="t-box">
+                                <span class="box-side box-front"
+                                    >innovative</span
+                                >
+                                <span class="box-side box-top"
+                                    >confident</span
+                                >
+                                <span class="box-side box-back"
+                                    >different</span
+                                >
+                                <span class="box-side box-bottom"
+                                    >world ready</span
+                                >
+                            </span>
+                        </span>
+                        <p class="hero-text">
+                        We provide many service for every student,Explore the IntelOneAPI platform
+                        </p>
+                    </div>
+                    <div class="capabilities left move-little-down">
+                        <img src="resources/img/elements/web_bg.png" alt="" />
+                        <p class="c_content">
+                            <span class="c_title">Networking</span>
+                            Intel OneAPI fosters diverse student networking, nurturing friendships and project collaborations, while also offering leadership roles like president, vice-president, treasurer, and event coordinator. Join us for a world of opportunities!
+                            <br />
+                        </p>
+                    </div>
+                    <div class="capabilities right">
+                        <p class="c_content">
+                            <span class="c_title">Events</span>
+                            We offer comprehensive event support, including venue booking, logistics, and coordination. Access our resources and facilities for your events. Boost participation and visibility with our marketing support. Plus, receive expert guidance on successful event management practices.
+                            <br />
+                        </p>
+                        <img
+                            src="resources/img/elements/graphics_bg.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="capabilities left">
+                        <img
+                            src="resources/img/elements/seo_bg.png"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            "
+                        />
+                        <p class="c_content">
+                            <span class="c_title">Guidance</span>
+                            We offer mentorship for personal and professional growth, diverse workshops, collaboration with other groups, and access to a network of alumni and industry experts for guidance.
+                            <br />
+                        </p>
+                        
+                    </div>
+                    <div class="fot">
+                        <div class="foo-link">
+                        </div>
+                        <div class="fot-link">
+                        </div>
+                        <div class="oot-link">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        <h1>hl</h1>
+                                        <span
+                                            >
+                                            <span style="color: #999"
+                                                ></span
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="other_text">
+                                        <h2></h2>
+                                        <p
+                                            class="pro_brief"
+                                            style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            "
+                                        >
+                                          desc
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    <h2>about pic</h2>
+                                    <p class="Date">
+                                        <b>Date: </b>
+                                        <span style="color: #999">2020</span>
+                                    </p>
+                                    <p class="client">
+                                        <b>1</b>
+                                        <span style="color: #999">45</span>
+                                    </p>
+                                    <p>
+                                        <b>2 </b>
+                                        <span style="color: #999"
+                                            >46</span
+                                        >
+                                    </p>
+                                    <p class="link">
+                                        <b>3 </b>
+                                        <span style="color: #999"
+                                            ><a href="#"
+                                                >47</a
+                                            ></span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="resources/img/logo.png" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >ideate</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    >robosoccer</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    >innaugration</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".app"
+                                    >xstacy</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    >bkl</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                        <div class="mix web">
+                            <img
+                                src="resources/img/logo.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/IOSC LOGO (1).png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/card/1.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/web/2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="resources/img/portfolios/app/1.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/card/2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/web/3.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/card/3.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/web/4.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/card/4.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/1.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/icon/4.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="resources/img/portfolios/app/2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/3.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/card/5.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/4.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/icon/2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/5.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/icon/1.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/6.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src="resources/img/portfolios/logo/7.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src="resources/img/portfolios/app/3.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/icon/3.jpg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span>Team 2021-2025</span>
+                    </h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Sribash paul</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    about
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/12.jpg" alt="" />
+                                <h4>Guruji</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    facial
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/14.jpg" alt="" />
+                                <h4>sonu</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    guruji ka chela
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="path/to/new_image.jpg" alt="" />
+                                <h4>New Team Member Name</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                   about
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="path/to/new_image.jpg" alt="" />
+                                <h4>New Team Member Name</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    about
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/Monica.jpg" alt="" />
+                                <h4>New Team Member Name</h4>
+                                <h5>hi</h5>
+                                <p>
+                                    <span>&ldquo;</span>
+                                   about
+                                </p>
+                            </div>                                                                                                                          
+                            <div class="swiper-slide">
+                                <img src="resources/img/varun.jpg" alt="" />
+                                <h4>Varun Sharma</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    about
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/Monica.jpg" alt="" />
+                                <h4>Monica Gupta</h4>
+                                <h5>Faculty Incharge</h5>
+                                <p>
+                                    <span>&ldquo;</span>
+                                   
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>ff</h4>
+                                <p>
+                                    <span>&ldquo;</span>
+                                ggh
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/vishal2.jpg" alt="" />
+                                <h4>persom</h4>
+                                <h5>uski aukaat</h5>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    baare me
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/sayan.jpg" alt="" />
+                                <h4>person</h4>
+                                <h5>designation</h5>
+                                <p>
+                                    <span>&ldquo;</span>
+                                   about
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6">
+                <div class="contact_us">
+                    <div id="map"></div>
+                    <address class="info_container">
+                        <div class="info info1">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="iname">Phone</span>
+                            <a href="Phone: +91-8534833926">+91-8534833926</a>
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a
+                                href="https://maps.app.goo.gl/UC7XKtHhZr12X5ka7"
+                            >
+                                <h3>Bharati Vidyapeeth College Of Engineering </h3>
+                                <span>A-4, Paschim Vihar, New Delhi</span><br />
+                                <span>India</span>
+                            </a>
+                        </div>
+                        <div class="info info3">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email</span>
+                            <a href="mailto:email1.gmail.com"
+                                >iosc.bvcoe@gmail.com</a
+                            >
+                           
+                        </div>
+                    </address>
+
+            
+
+        <script src="resources/js/jquery.min.js"></script>
+        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+        <script src="resources/js/mixitup.min.js"></script>
+        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
+        <script src="resources/swiper js/swiper-bundle.min.js"></script>
+        <script src="resources/js/email.min.js"></script>
+        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+            })();
+        </script>
+        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+        <script src="resources/js/vanilla-tilt.min.js"></script>
+        <script src="resources/js/anime.min.js"></script>
+        <script src="resources/js/home.js"></script>
+        <script src="resources/js/about.js"></script>
+        <script src="resources/js/services.js"></script>
+        <script src="resources/js/portfolio.js"></script>
+        <script src="resources/js/blog.js"></script>
+        <!-----------------LOCAL (CONTACT)----------------->
+        <script src="resources/js/contact.js"></script>
+        <!-----------------LOCAL (MAIN FILE)----------------->
+        <script src="resources/js/main.js"></script>
+
+        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+        <script>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 2000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(20, { direction: "reverse" }),
+                direction: "reverse",
+                autoplay: false,
+            });
+
+            animate3.add({
+                rotate: () => {
+                    return anime.random(-360, 360);
+                },
+                translateX: () => {
+                    return anime.random(-500, 500);
+                },
+                translateY: () => {
+                    return anime.random(-500, 500);
+                },
+                duration: 3000,
+            });
+
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0, 1],
+                delay: anime.stagger(200, { start: 7000 }),
+                autoplay: false,
+            });
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+            
+            const animate6 = anime({
+                targets: ['.services .t_dummy', '.services .hero-text'],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, {start: 1000}),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>
